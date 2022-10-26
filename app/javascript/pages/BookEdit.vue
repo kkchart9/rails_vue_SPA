@@ -22,7 +22,7 @@
           <input placeholder="Genre" type="text" class="validate" v-model="book.genre" required="required">
         </div>
       </div>
-      <div class="btn" v-on:click="updateBook(book.id)">本の情報を変更</div>
+      <div class="btn" v-on:click="updateBook(book.id)">本の情報を変更する</div>
     </form>
   </div>
 </template>
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     setbookEdit(id){
-      axios.get(`api/books/${id}`).then(res => {
+      axios.get(`/api/books/${id}`).then((res) => {
         this.book.id = res.data.id;
         this.book.title = res.data.title;
         this.book.author = res.data.author;
