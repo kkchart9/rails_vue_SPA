@@ -1,15 +1,15 @@
 import Vue          from 'vue'
 import VueRouter    from 'vue-router'
-import BookHome     from '../pages/BookHome.vue'
-import BookCreate from "../pages/BookCreate";
-import BookEdit from "../pages/BookEdit";
+import BlogsHome     from '../pages/BlogsHome.vue'
+import BlogsCreate   from "../pages/BlogsCreate";
+import BlogsEdit     from "../pages/BlogsEdit";
 
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/',  name: 'BookHome', component: BookHome },
-    { path: '/create', name: 'BookCreate', component: BookCreate },
-    { path: '/edit/:id', name: 'BookEdit', component: BookEdit},
+    { path: '/blogs',  name: 'BlogsHome', component: BlogsHome },
+    { path: '/blogs/create', name: 'BlogsCreate', component: BlogsCreate },
+    { path: '/blogs/edit/:id', name: 'BlogsEdit', component: BlogsEdit }
 ];
 
 export default new VueRouter({ routes });
